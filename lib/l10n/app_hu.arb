@@ -1,0 +1,11 @@
+{
+    "finance_management": "Kiadáskezelő",
+    "password": "Jelszó",
+    "login": "Bejelentkezés",
+    "password_again": "Jelszó újra",
+    "register": "Regisztráció",
+    "register_here": "Regisztrálj itt!",
+    "login_here": "Jelentkezz be itt!",
+    "choose_language": "Nyelv kiválasztása",
+    "username": "Felhasználónév"
+}

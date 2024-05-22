@@ -1,0 +1,11 @@
+{
+    "finance_management": "Finance management",
+    "login": "Login",
+    "password": "Password",
+    "password_again": "Password again",
+    "register": "Register",
+    "register_here": "Sign up here!",
+    "login_here": "Sign in here!",
+    "choose_language": "Choose a language",
+    "username": "Username"
+}

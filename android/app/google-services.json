@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "167109181719",
+    "project_id": "flutter-beadando",
+    "storage_bucket": "flutter-beadando.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:167109181719:android:8f8e3e986b0844f3eab752",
+        "android_client_info": {
+          "package_name": "com.example.beadando"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5MgtbCdtPf3-RUPD8_XOi54IIEfmwy6E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
