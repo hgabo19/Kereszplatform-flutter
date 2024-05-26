@@ -1,5 +1,4 @@
 import 'package:beadando/auth/auth.dart';
-import 'package:beadando/auth/login_or_register.dart';
 import 'package:beadando/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
