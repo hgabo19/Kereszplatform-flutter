@@ -1,11 +1,25 @@
 {
     "finance_management": "Kiadáskezelő",
-    "password": "Jelszó",
     "login": "Bejelentkezés",
+    "password": "Jelszó",
     "password_again": "Jelszó újra",
     "register": "Regisztráció",
     "register_here": "Regisztrálj itt!",
     "login_here": "Jelentkezz be itt!",
     "choose_language": "Nyelv kiválasztása",
-    "username": "Felhasználónév"
+    "username": "Felhasználónév",
+    "expenses": "Kiadásaim",
+    "date": "Dátum",
+    "person": "Személy",
+    "location": "Helyszín",
+    "new_expense": "Új kiadás hozzáadása",
+    "choose_date": "Válassz dátumot",
+    "expense_cost": "Kiadás költsége",
+    "person_spent_with": "Személy (akivel költöttem)",
+    "place_of_expense": "Költés helyszíne",
+    "add": "Hozzáadás",
+    "spent_with": "Akivel költöttem",
+    "amount": "Összeg",
+    "details_of_expense": "Kiadás részletei",
+    "expense_deleted": "Kiadás törölve"
 }

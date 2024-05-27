@@ -18,7 +18,7 @@ class MyTextfield extends StatelessWidget {
       decoration: InputDecoration(
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
         hintText: hintText,
-        hintStyle: TextStyle(
+        hintStyle: const TextStyle(
           color: Colors.grey, // Change this to the color you want
         ),
       ),

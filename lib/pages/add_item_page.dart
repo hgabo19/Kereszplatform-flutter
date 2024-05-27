@@ -1,11 +1,11 @@
 import 'dart:io';
-
 import 'package:beadando/components/my_button.dart';
 import 'package:beadando/services/firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:firebase_storage/firebase_storage.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class AddItemPage extends StatefulWidget {
   const AddItemPage({super.key});
@@ -18,6 +18,8 @@ class _AddItemPageState extends State<AddItemPage> {
   final TextEditingController dateController = TextEditingController();
   final TextEditingController costController = TextEditingController();
   final TextEditingController personController = TextEditingController();
+  final TextEditingController locationController = TextEditingController();
+
   String imageUrl = '';
   final FirestoreService firestoreService = FirestoreService();
   bool isUploading = false;
@@ -92,13 +94,13 @@ class _AddItemPageState extends State<AddItemPage> {
         child: Center(
           child: Column(
             children: [
-              const Padding(
+              Padding(
                 padding: EdgeInsets.all(30.0),
                 child: Align(
                   alignment: Alignment.topCenter,
                   child: Text(
-                    "Új kiadás hozzáadása",
-                    style: TextStyle(
+                    AppLocalizations.of(context)!.new_expense,
+                    style: const TextStyle(
                       fontSize: 26,
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
@@ -115,7 +117,7 @@ class _AddItemPageState extends State<AddItemPage> {
                       Icons.calendar_month,
                       color: Colors.white,
                     ),
-                    labelText: "Válassz dátumot",
+                    labelText: AppLocalizations.of(context)!.choose_date,
                     labelStyle: const TextStyle(color: Colors.white),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(20),
@@ -136,7 +138,7 @@ class _AddItemPageState extends State<AddItemPage> {
                       Icons.attach_money,
                       color: Colors.white,
                     ),
-                    labelText: "Kiadás költsége",
+                    labelText: AppLocalizations.of(context)!.expense_cost,
                     labelStyle: const TextStyle(color: Colors.white),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(20),
@@ -159,7 +161,27 @@ class _AddItemPageState extends State<AddItemPage> {
                       Icons.person,
                       color: Colors.white,
                     ),
-                    labelText: "Személy (kivel költöttem)",
+                    labelText: AppLocalizations.of(context)!.person_spent_with,
+                    labelStyle: const TextStyle(color: Colors.white),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                  ),
+                  keyboardType: TextInputType.name,
+                  style: const TextStyle(color: Colors.white),
+                ),
+              ),
+              const SizedBox(height: 10),
+              Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: TextField(
+                  controller: locationController,
+                  decoration: InputDecoration(
+                    icon: const Icon(
+                      Icons.location_city,
+                      color: Colors.white,
+                    ),
+                    labelText: AppLocalizations.of(context)!.location,
                     labelStyle: const TextStyle(color: Colors.white),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(20),
@@ -183,20 +205,24 @@ class _AddItemPageState extends State<AddItemPage> {
               Padding(
                 padding: const EdgeInsets.all(45.0),
                 child: isUploading
-                    ? CircularProgressIndicator()
+                    ? const CircularProgressIndicator()
                     : MyButton(
-                        text: "Hozzáadás",
+                        text: AppLocalizations.of(context)!.add,
                         onTap: () {
                           if (imageUrl.isEmpty) imageUrl = '';
+
                           firestoreService.addExpense(
-                              dateController.text,
-                              costController.text,
-                              personController.text,
-                              imageUrl);
+                            dateController.text,
+                            costController.text,
+                            personController.text,
+                            imageUrl,
+                            locationController.text,
+                          );
 
                           dateController.clear();
                           costController.clear();
                           personController.clear();
+                          locationController.clear();
                           imageUrl = '';
 
                           Navigator.pop(context);

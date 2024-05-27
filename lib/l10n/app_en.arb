@@ -7,5 +7,19 @@
     "register_here": "Sign up here!",
     "login_here": "Sign in here!",
     "choose_language": "Choose a language",
-    "username": "Username"
+    "username": "Username",
+    "expenses": "My expenses",
+    "date": "Date",
+    "person": "Person",
+    "location": "Location",
+    "new_expense": "Add new expense",
+    "choose_date": "Choose a date",
+    "expense_cost": "Expense cost",
+    "person_spent_with": "Person (who I spent with)",
+    "place_of_expense": "Place of the expense",
+    "add": "Add",
+    "spent_with": "I spent with",
+    "amount": "Amount",
+    "details_of_expense": "Kiadás részletei",
+    "expense_deleted": "Kiadás törölve"
 }
